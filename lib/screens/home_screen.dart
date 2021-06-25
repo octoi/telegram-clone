@@ -13,6 +13,11 @@ class HomeScreen extends StatelessWidget {
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.edit),
+        backgroundColor: appAccentColor,
+      ),
     );
   }
 }
