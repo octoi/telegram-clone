@@ -18,6 +18,12 @@ class HomeScreen extends StatelessWidget {
         child: Icon(Icons.edit),
         backgroundColor: appAccentColor,
       ),
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          children: [],
+        ),
+      ),
     );
   }
 }
