@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telegram/utils/constants.dart';
 import 'package:telegram/utils/data.dart';
 
 class ChatCard extends StatelessWidget {
@@ -21,6 +22,28 @@ class ChatCard extends StatelessWidget {
                   backgroundImage: NetworkImage(content.profile),
                   radius: 30.0,
                 ),
+                SizedBox(width: 15.0),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      content.title,
+                      style: TextStyle(
+                        color: appPrimaryTextColor,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    SizedBox(height: 5.0),
+                    Text(
+                      content.subTitle,
+                      style: TextStyle(
+                        color: appSecondaryTextColor,
+                        fontSize: 15.0,
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
