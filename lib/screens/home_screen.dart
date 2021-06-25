@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:telegram/utils/constants.dart';
+import 'package:telegram/utils/data.dart';
+import 'package:telegram/widgets/chat_card.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -21,7 +23,9 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
-          children: [],
+          children: profileList.map((profile) {
+            return ChatCard(content: profile);
+          }).toList(),
         ),
       ),
     );
