@@ -17,33 +17,51 @@ class ChatCard extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(content.profile),
-                  radius: 30.0,
-                ),
-                SizedBox(width: 15.0),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
                   children: [
-                    Text(
-                      content.title,
-                      style: TextStyle(
-                        color: appPrimaryTextColor,
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(content.profile),
+                      radius: 30.0,
                     ),
-                    SizedBox(height: 5.0),
-                    Text(
-                      content.subTitle,
-                      style: TextStyle(
-                        color: appSecondaryTextColor,
-                        fontSize: 15.0,
-                      ),
+                    SizedBox(width: 15.0),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          content.title,
+                          style: TextStyle(
+                            color: appPrimaryTextColor,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(height: 5.0),
+                        Text(
+                          content.subTitle,
+                          style: TextStyle(
+                            color: appSecondaryTextColor,
+                            fontSize: 15.0,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
-                )
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: content.hasNewMessage
+                      ? [Text("")]
+                      : [
+                          Text(
+                            content.time,
+                            style: TextStyle(
+                              color: appSecondaryTextColor,
+                            ),
+                          ),
+                        ],
+                ),
               ],
             ),
           ),
