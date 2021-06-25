@@ -8,6 +8,25 @@ class ChatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+        InkWell(
+          onTap: () {},
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  backgroundImage: NetworkImage(content.profile),
+                  radius: 30.0,
+                ),
+              ],
+            ),
+          ),
+        ),
+        Divider(),
+      ],
+    );
   }
 }
