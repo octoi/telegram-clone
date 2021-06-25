@@ -52,7 +52,28 @@ class ChatCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: content.hasNewMessage
-                      ? [Text("")]
+                      ? [
+                          Text(
+                            content.time,
+                            style: TextStyle(
+                              color: appAccentColor,
+                            ),
+                          ),
+                          SizedBox(height: 5.0),
+                          Container(
+                            padding: EdgeInsets.all(8.0),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: appAccentColor,
+                            ),
+                            child: Center(
+                              child: Text(
+                                content.howManyToRead,
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ]
                       : [
                           Text(
                             content.time,
