@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:telegram/utils/constants.dart';
 import 'package:telegram/utils/data.dart';
 import 'package:telegram/widgets/chat_card.dart';
+import 'package:telegram/widgets/drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -20,9 +21,7 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
       ),
-      drawer: Drawer(
-        child: Text("Hello World"),
-      ),
+      drawer: CustomDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.edit),
