@@ -12,8 +12,16 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: appPrimaryColor,
         elevation: 0.0,
         title: Text('Telegram'),
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
+      ),
+      drawer: Drawer(
+        child: Text("Hello World"),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
