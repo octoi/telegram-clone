@@ -43,6 +43,7 @@ class CustomDrawer extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               currentUser.name,
@@ -52,7 +53,24 @@ class CustomDrawer extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
+                            SizedBox(height: 3.0),
+                            Text(
+                              currentUser.number,
+                              style: TextStyle(
+                                color: appSecondaryTextColor,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
                           ],
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.keyboard_arrow_down,
+                            size: 30.0,
+                          ),
+                          color: appPrimaryTextColor,
                         )
                       ],
                     )
