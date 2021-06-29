@@ -37,6 +37,24 @@ class CustomDrawer extends StatelessWidget {
                           color: appPrimaryTextColor,
                         )
                       ],
+                    ),
+                    SizedBox(height: 10.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              currentUser.name,
+                              style: TextStyle(
+                                color: appPrimaryTextColor,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
                     )
                   ],
                 ),
