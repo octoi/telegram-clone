@@ -30,7 +30,7 @@ class User {
 
 User currentUser = User(
   name: "Scary Tiger",
-  number: "+0000000",
+  number: "+00 0000000",
   profile:
       "https://cdn.pixabay.com/photo/2016/11/29/10/07/tiger-1868911_960_720.jpg",
 );
