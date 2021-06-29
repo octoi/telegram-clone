@@ -28,7 +28,7 @@ class CustomDrawerHeader extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(height: 10.0),
+          SizedBox(height: 20.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -39,7 +39,7 @@ class CustomDrawerHeader extends StatelessWidget {
                     currentUser.name,
                     style: TextStyle(
                       color: appPrimaryTextColor,
-                      fontSize: 15.0,
+                      fontSize: 18.0,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
