@@ -19,21 +19,23 @@ class DrawerTile extends StatelessWidget {
         onTap: () {},
         splashColor: appPrimaryColor,
         child: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 10.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               IconButton(
                 onPressed: () {},
                 icon: Icon(icon),
                 color: appSecondaryTextColor,
+                iconSize: 28.0,
               ),
+              SizedBox(width: 20.0),
               Text(
                 title,
                 style: TextStyle(
                   color: appPrimaryTextColor,
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.w600,
+                  fontSize: 18.0,
                 ),
               )
             ],
